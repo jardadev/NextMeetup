@@ -1,20 +1,33 @@
+import { useRef } from 'react';
 import styles from './EventFilter.module.css';
 import Button from '../../ui/Button';
 
-const EventFilter = () => {
+const EventFilter = (props) => {
+	const { onSearch } = props;
+
+	const monthFilterRef = useRef();
+	const yearFilterRef = useRef();
+
+	const searchButtonHandler = (e) => {
+		e.preventDefault();
+		const filteredMonth = monthFilterRef.current.value;
+		const filteredYear = yearFilterRef.current.value;
+
+		onSearch(filteredMonth, filteredYear);
+	};
 	return (
 		<form className={styles.form}>
 			<div className={styles.controls}>
 				<div className={styles.control}>
 					<label htmlFor='year'>Year</label>
-					<select id='year'>
+					<select id='year' ref={yearFilterRef}>
 						<option value='2022'>2022</option>
 						<option value='2023'>2023</option>
 					</select>
 				</div>
 				<div className={styles.control}>
 					<label htmlFor='month'>Month</label>
-					<select id='month'>
+					<select id='month' ref={monthFilterRef}>
 						<option value='1'>January</option>
 						<option value='2'>February</option>
 						<option value='3'>March</option>
@@ -30,7 +43,7 @@ const EventFilter = () => {
 					</select>
 				</div>
 			</div>
-			<Button>Search</Button>
+			<Button onClick={searchButtonHandler}>Search</Button>
 		</form>
 	);
 };

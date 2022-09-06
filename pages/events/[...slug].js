@@ -1,5 +1,7 @@
+import EventFilter from '../../components/Events/EventFilter/EventFilter'
+
 const EventFilterPage = () => {
-	return <div>Filters</div>;
+	return <>Filtered Page</>;
 };
 
 export default EventFilterPage;

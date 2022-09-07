@@ -3,6 +3,7 @@ import { getEventById } from '../../dummy-data';
 import EventSummary from '../../components/Events/EventDetail/EventSummary';
 import EventContent from '../../components/Events/EventDetail/EventContent';
 import EventLogistics from '../../components/Events/EventDetail/EventLogistics';
+
 const EventDetailPage = () => {
 	const router = useRouter();
 	const eventDetail = router.query.eventId;

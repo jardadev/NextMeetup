@@ -17,10 +17,10 @@
     `'/events'`
 
 -   Event Detail Page(Show Selected Event):
-    `'/events/<some-id>'`
+    `'/events/[some-id]'`
 
 -   Filtered Events Page(Show filtered Events):
-    `'/events/...slug'`
+    `'/events/[...slug]`
 
 ## Installation
 

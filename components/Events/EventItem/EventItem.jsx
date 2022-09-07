@@ -18,7 +18,7 @@ const EventItem = (props) => {
 
 	return (
 		<li className={styles.item}>
-			<img src={image} alt={title} height={'150px'} />
+			<img src={`/${image}`} alt={title} height={'150px'} />
 			<div className={styles.content}>
 				<div>
 					<h2>{title}</h2>

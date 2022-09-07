@@ -10,10 +10,17 @@
 
 ## Routes
 
-'/' - Starting Page (Show featured Events)
-'/events' - Events Page (Show all Events)
-'/events/<some-id>' - Event Detail Page(Show Selected Event)
-'/events/...slug' - Filtered Events Page(Show filtered Events)
+-   Starting Page (Show featured Events):
+    `'/'`
+
+-   Events Page (Show all Events):
+    `'/events'`
+
+-   Event Detail Page(Show Selected Event):
+    `'/events/<some-id>'`
+
+-   Filtered Events Page(Show filtered Events):
+    `'/events/...slug'`
 
 ## Installation
 
